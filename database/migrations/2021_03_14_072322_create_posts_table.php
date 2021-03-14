@@ -12,12 +12,12 @@ class CreatePostsTable extends Migration
  public function up()
  {
  Schema::create('posts', function (Blueprint $table) {
-    $table->id();
-    $table->string('title', 100)->index();
-    $table->string('slug', 100)->index();
-    $table->text('content');
-    $table->boolean('draft')->default(false);
-    $table->timestamps();
+$table->id();
+ $table->string('title', 100)->index();
+ $table->string('slug', 100)->index();
+ $table->text('content');
+ $table->boolean('draft')->default(false);
+ $table->timestamps();
  });
  }
  /**
