@@ -18,7 +18,7 @@ $table->id();
  $table->text('content');
  $table->boolean('draft')->default(false);
  $table->timestamps();
- });
+});
  }
  /**
  * Reverse the migrations.
