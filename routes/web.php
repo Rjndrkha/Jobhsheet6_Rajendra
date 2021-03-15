@@ -13,9 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+//Route::get('/', function () {
+  //  return view('index');
+//});
 //Route::get('/about', function () {
   //  return view('about');
 //});
@@ -39,6 +39,6 @@ Route::get('/news', function () {
     return view('news');
 });
 */
-//Route::get('/', [PostController::class, 'index']);
-//Route::get('posts/{slug}', [PostController::class, 'show'])
-   // ->name('posts.show');
+Route::get('/', [PostController::class, 'index']);
+Route::get('posts/{slug}', [PostController::class, 'show'])
+    ->name('posts.show');

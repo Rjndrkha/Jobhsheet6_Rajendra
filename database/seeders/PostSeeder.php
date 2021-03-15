@@ -20,19 +20,10 @@ class PostSeeder extends Seeder
         ]);
         //
     }
-    DB::table('posts')->insert([
-        'title' => 'Belajar Model Dengan Laravel2',
-        'slug' => ' belajar-model-dengan-laravel2',
-        'content' => 'Belajar Laravel itu happy',
-        'draft' => 0
-    ]);
-    //
 
-}
-}
 
-public function definition()
- {
+
+public function definition(){
  $title = $this->faker->sentence;
  $slug = str_slug($title);
  return [
@@ -42,8 +33,10 @@ public function definition()
  'content' => $this->faker->realText(),
  'draft' => random_int(0, 1),
  ];
-class PostSeeder extends Seeder
-{
+}
+}
+
+class PostSeeder extends Seeder{
  /**
  * Run the database seeds.
  *

@@ -1,19 +1,15 @@
 @extends('layouts.post')
 
 @section('content')
+@extends('layouts.post')
+
+@section('content')
 <div class="container mt-5">
-    <h1>Posts</h1>
-    <ul>
-        @foreach($posts as $post)
-            <li>
-                <a href="{{ route('posts.show', ['slug' => $post->slug]) }}">
-                    {{ $post->title }}
-                </a>
-            </li>
-        @endforeach
-    </ul>
-    <div class="d-flex">
-        {{ $posts->links() }}
-    </div>
+    <h1>{{ $post->title }}</h1>
+    <img src="{{ $post->image }}" />
+    <p>
+        {{ $post->content }}
+    </p>
 </div>
+@endsection
 @endsection
