@@ -107,42 +107,21 @@ License URI: http://www.themevault.net/license/-->
             <section class="gallery-block gallery-front">
                 <div class="container">
                     <div class="row">
+                        @if(count($rooms)>0)
+                        @foreach ($rooms as $room)
                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                             <div class="gallery-image">
-                                <img class="img-responsive" src="a/images/room1.png">
+                                <img class="img-responsive" src="a/images/{{$room->image}}">
                                 <div class="overlay">
-                                    <a class="info pop example-image-link img-responsive" href="a/images/room1.png" data-lightbox="example-1"><i class="fa fa-search" aria-hidden="true"></i></a>
+                                    <a class="info pop example-image-link img-responsive" href="a/images/{{$room->image}}" data-lightbox="example-1"><i class="fa fa-search" aria-hidden="true"></i></a>
                                     <p><a>delux room</a></p>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                            <div class="gallery-image">
-                                <img class="img-responsive" src="a/images/room2.png">
-                                <div class="overlay">
-                                    <a class="info pop example-image-link img-responsive" href="a/images/room2.png" data-lightbox="example-1"><i class="fa fa-search" aria-hidden="true"></i></a>
-                                    <p><a>delux room</a></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                            <div class="gallery-image">
-                                <img class="img-responsive" src="a/images/room3.png">
-                                <div class="overlay">
-                                    <a class="info pop example-image-link img-responsive" href="a/images/room3.png" data-lightbox="example-1"><i class="fa fa-search" aria-hidden="true"></i></a>
-                                    <p><a>delux room</a></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                            <div class="gallery-image">
-                                <img class="img-responsive" src="a/images/room4.png">
-                                <div class="overlay">
-                                    <a class="info pop example-image-link img-responsive" href="a/images/room4.png" data-lightbox="example-1"><i class="fa fa-search" aria-hidden="true"></i></a>
-                                    <p><a>delux room</a></p>
-                                </div>
-                            </div>
-                        </div>
+                        </div> 
+                        @endforeach
+                        @else
+                           <H1>There is no Rooms</H1> 
+                        @endif
                     </div>
                 </div>
             </section>

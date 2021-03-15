@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RoomController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,15 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//Route::get('/', function () {
-  //  return view('index');
-//});
+Route::get('/', function () {
+   return view('index');
+});
 //Route::get('/about', function () {
   //  return view('about');
 //});
-//Route::get('/rooms', function () {
-  //  return view('rooms');
-//});
+Route::get('/rooms', [RoomController::class, 'index'])->name('rooms');
 //Route::get('/contact', function () {
   //  return view('contact');
 //});
@@ -39,6 +38,4 @@ Route::get('/news', function () {
     return view('news');
 });
 */
-Route::get('/', [PostController::class, 'index']);
-Route::get('posts/{slug}', [PostController::class, 'show'])
-    ->name('posts.show');
+
