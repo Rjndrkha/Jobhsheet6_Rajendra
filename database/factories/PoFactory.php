@@ -19,6 +19,7 @@ class PostFactory extends Factory
      * @return array
      */
     public function definition()
+    
     {
         $title = $this->faker->sentence;
         $slug = str_slug($title);

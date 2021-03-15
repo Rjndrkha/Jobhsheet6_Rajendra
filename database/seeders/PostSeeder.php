@@ -23,10 +23,11 @@ class PostSeeder extends Seeder
     DB::table('posts')->insert([
         'title' => 'Belajar Model Dengan Laravel2',
         'slug' => ' belajar-model-dengan-laravel2',
-        'content' => 'Belajar Laravel itu menyenangkan',
+        'content' => 'Belajar Laravel itu happy',
         'draft' => 0
     ]);
     //
+
 }
 }
 
