@@ -15,27 +15,30 @@ use App\Http\Controllers\RoomController;
 */
 
 Route::get('/', function () {
-   return view('index');
+  return view('index');
 });
-//Route::get('/about', function () {
-  //  return view('about');
-//});
+Route::get('/about', function () {
+  return view('about');
+});
 Route::get('/rooms', [RoomController::class, 'index'])->name('rooms');
-//Route::get('/contact', function () {
-  //  return view('contact');
-//});
-//Route::get('/gallery', function () {
-  //  return view('gallery');
-//});
-//Route::get('/dinning', function () {
- //   return view('dinning');
-//});
-//Route::get('/news', function () {
-  //  return view('news');
-//});
-/*
-Route::get('/news', function () {
-    return view('news');
+Route::get('/contact', function () {
+  return view('contact');
 });
-*/
+Route::get('/gallery', function () {
+  return view('gallery');
+});
+Route::get('/dinning', function () {
+  return view('dinning');
+});
+Route::get('/news', function () {
+  return view('news');
+});
+
+Route::get('/news', function () {
+  return view('news');
+});
+
+Route::get('/login', function () {
+  return view('login');
+});
 
