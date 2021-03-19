@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoomController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,7 +38,14 @@ Route::get('/news', function () {
 Route::get('/news', function () {
   return view('news');
 });
+Route::get('/login', function () {
+  return view('login');
+});
+Route::get('/home', function () {
+  return view('home');
+});
 
+/*
 Route::get('/login', function () {
   return view('login');
 });
@@ -45,3 +53,5 @@ Route::get('/login', function () {
 Route::get('/register', function () {
   return view('register');
 });
+*/
+ Auth::routes();
